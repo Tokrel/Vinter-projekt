@@ -19,6 +19,8 @@ public class PersonalSystem {
                     email = scan.nextLine();
                     System.out.println("Skriv ditt lösenord:");
                     password = scan.nextLine();
+                    Login login = new Login(email,password);
+                    login.execute();
                     
                     break;
                 case 2:
@@ -27,11 +29,15 @@ public class PersonalSystem {
                     email = scan.nextLine();
                     System.out.println("Skriv ditt lösenord:");
                     password = scan.nextLine();
+                    Register register = new Register(email,password);
+                    register.execute();
                     
                     break;
 
                 case 3:
                     System.out.println("Dessa emails är registerarde");
+                    ShowUsers showusers = new ShowUsers(email,password);
+                    showusers.execute();
                     break;
 
                 case 4:

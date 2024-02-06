@@ -6,8 +6,10 @@ public class Login extends GetData{
     @Override
     public void execute() {
         if(getDataBase().isUserRegistered(getEmail(), getPassword())==true) {
-            Account newUser = getDataBase().getUser(getEmail(), getPassword());
-            //welcome snart
+            Account loggedInUser = getDataBase().getUser(getEmail(), getPassword());
+            Welcome welcome = new Welcome(loggedInUser);
+            welcome.Message();
+            welcome.Message2();
         }else {
 
             System.out.println("User is not registered");

@@ -1,10 +1,8 @@
 import java.util.Scanner;
 public class PersonalSystem {
-    //Instance variables
+
     Scanner scan = new Scanner(System.in);
     String email, password;
-
-    //Methods
 
 
     public void run(){
@@ -21,7 +19,7 @@ public class PersonalSystem {
                     password = scan.nextLine();
                     Login login = new Login(email,password);
                     login.execute();
-                    
+
                     break;
                 case 2:
                     scan.nextLine();
@@ -31,7 +29,7 @@ public class PersonalSystem {
                     password = scan.nextLine();
                     Register register = new Register(email,password);
                     register.execute();
-                    
+
                     break;
 
                 case 3:

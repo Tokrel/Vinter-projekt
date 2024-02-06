@@ -13,6 +13,7 @@ public class Welcome {
     public void Message() {
         System.out.println("Hej "+loggedInUser.getEmail());
     }
+    //
 
     public void Message2() {
         boolean goo = true;
